@@ -1,7 +1,7 @@
 # options specified here will apply to all posts in this folder
 
-author: Stefan Schneider
-toc: true
+author: OUN Vikreth
+toc: false
 layout: post
 
 # freeze computational output

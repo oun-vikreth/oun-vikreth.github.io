@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Stefan's Blog"
+  title: "Vikreth's Blog"
   description: Things I learned or want to learn.
   repo-url: https://github.com/stefanbschneider/blog
   repo-actions: [issue]
@@ -14,11 +14,9 @@ website:
       # - icon: house
       #   href: https://stefanbschneider.github.io/
       - icon: github
-        href: https://github.com/stefanbschneider/
+        href: https://github.com/oun-vikreth/
 format:
   html:
-    theme: cosmo
+    theme: sketchy
     css: styles.css
-
-
-
+    smooth-scroll: true
