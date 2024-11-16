@@ -4,7 +4,7 @@ project:
 website:
   title: "Vikreth's Blog"
   description: Things I learned or want to learn.
-  repo-url: https://github.com/stefanbschneider/blog
+  repo-url: https://github.com/oun-vikreth/ITC_I5-Works
   repo-actions: [issue]
   google-analytics: G-RDWKTYTDBL
   cookie-consent: true
