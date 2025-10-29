@@ -4,7 +4,7 @@ project:
 
 website:
   title: "OUN VIKRETH"
-  site-url: "https://oun-vikreth.github.io/monportfolio/docs/"
+  site-url: https://oun-vikreth.github.io/monportfolio
   navbar:
     right:
       - about.qmd
