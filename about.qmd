@@ -1,0 +1,22 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: solana
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/oun-vikreth/
+    - icon: github
+      text: Github
+      href: https://github.com/oun-vikreth/
+
+---
+
+Welcome to my personal blog! My name is OUN VIKRETH. Here, I share my thoughts, experiences, and projects related to technology, programming, and personal growth.
+
+This blog serves as a space to document my learning journey, showcase my work, and connect with like-minded individuals. Feel free to explore my posts and reach out if you have any questions or feedback.
+
+Thank you for visiting!
+
+សូស្ដី 
