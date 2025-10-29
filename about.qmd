@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Learn more about Oun Vikreth, his portfolio, and professional background."
 image: statics/profile.jpg
 about:
   template: solana

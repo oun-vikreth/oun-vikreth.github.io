@@ -21,6 +21,48 @@
     "text": "Welcome to my personal blog! My name is OUN VIKRETH. Here, I share my thoughts, experiences, and projects related to technology, programming, and personal growth.\nThis blog serves as a space to document my learning journey, showcase my work, and connect with like-minded individuals. Feel free to explore my posts and reach out if you have any questions or feedback.\nThank you for visiting!\nសូស្ដី"
   },
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "unvikreth@gmail.com"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "EDUCATION",
+    "text": "EDUCATION\nEngineer Degree in Data Science  Institute of Technology of Cambodia, Sen Sok, Phnom Penh 2020 — Present\nProfessional Training in Artificial Intelligence (AI)  TUX Global Institute, Phnom Penh Mar 2022 — Mar 2023\n\nModules taken: Human Centered Design, Mathematical Foundations of AI, Machine Learning & Database."
+  },
+  {
+    "objectID": "cv.html#work-experience",
+    "href": "cv.html#work-experience",
+    "title": "Curriculum Vitae",
+    "section": "WORK EXPERIENCE",
+    "text": "WORK EXPERIENCE\n\nCredit Risk Modelling and Research, Officer\nABA Bank, Head Office, Phnom Penh Jun 2025 — Present\n\nPerforming validation on PD, LGD, and MEVs scenarios calibration.\n\nReviewing and challenging quantitative and qualitative methodology.\n\nDeveloping dashboards of portfolio analysis for Credit Risk Management Division.\n\n\n\nData Scientist, Apprentice\nWing Bank, Wing Tower, Phnom Penh Feb 2025 — May 2025\n\nDeveloped credit scorecard model for customer creditworthiness (application and behavioural).\n\nResearched new methodologies for tactical projects.\n\n\n\nReporting and Analytics, Intern\nKhmer Beverages, Headquarter, Phnom Penh Jun 2024 — Sep 2024\n\nDeveloped and maintained a Sales Performance Dashboard using Power BI to track key metrics.\n\nAssisted in preparing and delivering reports for internal stakeholders.\n\nConducted regional market visits to collect outlet feedback data.\n\nIdentified and resolved data discrepancies to ensure dashboard accuracy.\n\n\n\nData Analytics Intern\nSmart Axiata, Headquarter, Phnom Penh Aug 2023 — Nov 2023\n\nExtracted, transformed, and loaded data into target databases and data warehouses.\n\nIntegrated multiple data sources into dashboards for comprehensive performance insights.\n\nOptimized SQL queries to improve performance and reduce execution time.\n\nReviewed data outputs from the Data Engineering team for accuracy."
+  },
+  {
+    "objectID": "cv.html#technical-skills",
+    "href": "cv.html#technical-skills",
+    "title": "Curriculum Vitae",
+    "section": "TECHNICAL SKILLS",
+    "text": "TECHNICAL SKILLS\n\nRisk Modelling\nExploratory Data Analysis\nPower BI & Tableau\nSQL\nPython\nR\n\nStatistics\nMachine Learning"
+  },
+  {
+    "objectID": "cv.html#links",
+    "href": "cv.html#links",
+    "title": "Curriculum Vitae",
+    "section": "LINKS",
+    "text": "LINKS\n\nGitHub: oun-vikreth\n\nLinkedIn: OUN Vikreth"
+  },
+  {
+    "objectID": "cv.html#references",
+    "href": "cv.html#references",
+    "title": "Curriculum Vitae",
+    "section": "REFERENCES",
+    "text": "REFERENCES\nPHAUK Sokkhey, Ph.D\nDeputy Head of Department of Applied Mathematics and Statistics (AMS)\nHead of Master Program of Data Science\nTel: +855 12 939 310\nEmail: phauk.sokkhey@itc.edu.kh"
+  },
+  {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
