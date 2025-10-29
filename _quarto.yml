@@ -18,5 +18,6 @@ format:
     theme: sandstone
     css: styles.css
 
-
+metadata:
+  robots: index, follow
 
