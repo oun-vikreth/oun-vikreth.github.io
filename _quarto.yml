@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: docs
 
+metadata:
+  google-site-verification: "google-site-verification=OGNvFs23_xfxC4BY-uqwil2bz27rFyX38siMQr6IhKE"
+
 website:
   title: "OUN VIKRETH"
   site-url: https://oun-vikreth.github.io/monportfolio
