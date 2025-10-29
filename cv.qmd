@@ -1,0 +1,78 @@
+---
+title: "Curriculum Vitae"
+format:
+  html:
+    toc: false
+css: styles.css
+format-links: false
+---
+
+::: {.print-only .contact-block}
+unvikreth@gmail.com  
+:::
+
+## EDUCATION
+
+**Engineer Degree in Data Science** <br> *Institute of Technology of Cambodia, Sen Sok, Phnom Penh* [*2020 — Present*]{.cvdate}
+
+**Professional Training in Artificial Intelligence (AI)** <br> *TUX Global Institute, Phnom Penh* [*Mar 2022 — Mar 2023*]{.cvdate}
+
+- Modules taken: Human Centered Design, Mathematical Foundations of AI, Machine Learning & Database.
+
+## WORK EXPERIENCE{style="page-break-before: always"}
+
+### Credit Risk Modelling and Research, Officer  
+***ABA Bank, Head Office, Phnom Penh*** [Jun 2025 — Present]{.cvdate}
+
+- Performing validation on PD, LGD, and MEVs scenarios calibration.  
+- Reviewing and challenging quantitative and qualitative methodology.  
+- Developing dashboards of portfolio analysis for Credit Risk Management Division.
+
+### Data Scientist, Apprentice  
+***Wing Bank, Wing Tower, Phnom Penh*** [Feb 2025 — May 2025]{.cvdate}
+
+- Developed credit scorecard model for customer creditworthiness (application and behavioural).  
+- Researched new methodologies for tactical projects.
+
+### Reporting and Analytics, Intern  
+***Khmer Beverages, Headquarter, Phnom Penh*** [Jun 2024 — Sep 2024]{.cvdate}
+
+- Developed and maintained a Sales Performance Dashboard using Power BI to track key metrics.  
+- Assisted in preparing and delivering reports for internal stakeholders.  
+- Conducted regional market visits to collect outlet feedback data.  
+- Identified and resolved data discrepancies to ensure dashboard accuracy.
+
+### Data Analytics Intern  
+***Smart Axiata, Headquarter, Phnom Penh*** [Aug 2023 — Nov 2023]{.cvdate}
+
+- Extracted, transformed, and loaded data into target databases and data warehouses.  
+- Integrated multiple data sources into dashboards for comprehensive performance insights.  
+- Optimized SQL queries to improve performance and reduce execution time.  
+- Reviewed data outputs from the Data Engineering team for accuracy.
+
+## TECHNICAL SKILLS
+
+- **Risk Modelling**
+- **Exploratory Data Analysis**
+- **Power BI & Tableau** 
+- **SQL**
+- **Python** 
+- **R**  
+- **Statistics**
+- **Machine Learning**
+
+::: {.no-print}
+## LINKS
+- **GitHub:** [oun-vikreth](https://github.com/oun-vikreth)  
+- **LinkedIn:** [OUN Vikreth](https://www.linkedin.com/in/oun-vikreth-00623421a/)  
+:::
+
+::: {.print-only}
+## REFERENCES
+
+**PHAUK Sokkhey, Ph.D**  
+Deputy Head of Department of Applied Mathematics and Statistics (AMS)  
+Head of Master Program of Data Science  
+Tel: +855 12 939 310  
+Email: phauk.sokkhey@itc.edu.kh
+:::

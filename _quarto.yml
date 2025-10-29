@@ -4,9 +4,11 @@ project:
 
 website:
   title: "OUN VIKRETH"
+  site-url: "https://oun-vikreth.github.io/monportfolio/docs/"
   navbar:
     right:
       - about.qmd
+      - cv.qmd
       - icon: github
         href: https://github.com/oun-vikreth
       - icon: LinkedIn

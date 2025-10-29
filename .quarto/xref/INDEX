@@ -10,5 +10,13 @@
   },
   "posts/welcome/index.qmd": {
     "index.html": "e6ab482e"
+  },
+  "cv.qmd": {
+    "cv.html": "b7fadcd7",
+    "cv.tex": "c4779fcf",
+    "cv.pdf": "d4c903c1"
+  },
+  "Personal_Blog.qmd": {
+    "Personal_Blog.html": "53059e79"
   }
 }
