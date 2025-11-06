@@ -14,7 +14,7 @@ unvikreth@gmail.com
 
 ## EDUCATION
 
-**Engineer Degree in Data Science** <br> *Institute of Technology of Cambodia, Sen Sok, Phnom Penh* [*2020 — Present*]{.cvdate}
+**Engineer Degree in Data Science** <br> *Institute of Technology of Cambodia, Sen Sok, Phnom Penh* [*2020 — 2025*]{.cvdate}
 
 **Professional Training in Artificial Intelligence (AI)** <br> *TUX Global Institute, Phnom Penh* [*Mar 2022 — Mar 2023*]{.cvdate}
 

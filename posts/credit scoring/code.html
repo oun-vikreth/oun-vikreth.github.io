@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="9d8049fc" class="cell" data-execution_count="55">
+<div id="9d8049fc" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="622a5360" class="cell" data-execution_count="2">
+<div id="622a5360" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/dchatca/Credit-Scorecard-model/refs/heads/main/data/data_final.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -230,12 +230,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="exploratory-data-analysis" class="level1">
 <h1>Exploratory Data Analysis</h1>
-<div id="628a1c75" class="cell" data-execution_count="3">
+<div id="628a1c75" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
@@ -430,12 +430,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="defbdaea" class="cell" data-execution_count="4">
+<div id="defbdaea" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>person_age                       0
 person_income                    0
 person_home_ownership            0
@@ -451,13 +451,13 @@ cb_person_cred_hist_length       0
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="30cef170" class="cell" data-execution_count="5">
+<div id="30cef170" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> df.dropna()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="4ad5de4f" class="cell" data-execution_count="6">
+<div id="4ad5de4f" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># distribution of person_emp_length before and after cleaning</span></span>
@@ -483,24 +483,24 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="3e2797dd" class="cell" data-execution_count="7">
+<div id="3e2797dd" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_clean.loan_status.value_counts(normalize<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>loan_status
 0    0.783146
 1    0.216854
 Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cb3b2558" class="cell" data-execution_count="8">
+<div id="cb3b2558" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_clean.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -613,7 +613,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="fa5bbb56" class="cell" data-execution_count="9">
+<div id="fa5bbb56" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize average person_income by loan_status</span></span>
@@ -632,7 +632,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="a67d744e" class="cell" data-execution_count="10">
+<div id="a67d744e" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hypothesis Testing: Is there a significant difference in average loan amount between good and bad loans?</span></span>
@@ -653,13 +653,13 @@ Name: proportion, dtype: float64</code></pre>
 <h1>Credit Scoring</h1>
 <section id="development" class="level2">
 <h2 class="anchored" data-anchor-id="development">Development</h2>
-<div id="39f19585" class="cell" data-execution_count="19">
+<div id="39f19585" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>variable_names <span class="op">=</span> <span class="bu">list</span>(df_clean.drop(columns<span class="op">=</span>[<span class="st">'loan_status'</span>]).columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="7284ba60" class="cell" data-execution_count="20">
+<div id="7284ba60" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_clean[variable_names]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -672,12 +672,12 @@ Name: proportion, dtype: float64</code></pre>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_clean[target].values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="c38896e0" class="cell" data-execution_count="17">
+<div id="c38896e0" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_clean.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
 
@@ -781,7 +781,7 @@ Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="ade5f52d" class="cell" data-execution_count="18">
+<div id="ade5f52d" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>selection_criteria <span class="op">=</span> {</span>
@@ -790,19 +790,19 @@ Name: proportion, dtype: float64</code></pre>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="50ea099e" class="cell" data-execution_count="22">
+<div id="50ea099e" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>binning_process <span class="op">=</span> BinningProcess(variable_names, selection_criteria<span class="op">=</span>selection_criteria)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="9260bab2" class="cell" data-execution_count="23">
+<div id="9260bab2" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>estimator <span class="op">=</span> LogisticRegression(solver<span class="op">=</span><span class="st">"lbfgs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="9a8166dd" class="cell" data-execution_count="24">
+<div id="9a8166dd" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>scorecard <span class="op">=</span> Scorecard(binning_process<span class="op">=</span>binning_process,</span>
@@ -810,19 +810,19 @@ Name: proportion, dtype: float64</code></pre>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                      scaling_method_params<span class="op">=</span>{<span class="st">"min"</span>: <span class="dv">300</span>, <span class="st">"max"</span>: <span class="dv">850</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="74568a97" class="cell" data-execution_count="53">
+<div id="74568a97" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.3</span>, stratify<span class="op">=</span>y, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="b164947e" class="cell" data-execution_count="56">
+<div id="b164947e" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>scorecard.fit(X_train, y_train, show_digits<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="56">
-<style>#sk-container-id-3 {
+<div class="cell-output cell-output-display" data-execution_count="21">
+<style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: #000;
   --sklearn-color-text-muted: #666;
@@ -853,15 +853,15 @@ Name: proportion, dtype: float64</code></pre>
   }
 }
 
-#sk-container-id-3 {
+#sk-container-id-1 {
   color: var(--sklearn-color-text);
 }
 
-#sk-container-id-3 pre {
+#sk-container-id-1 pre {
   padding: 0;
 }
 
-#sk-container-id-3 input.sk-hidden--visually {
+#sk-container-id-1 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -873,7 +873,7 @@ Name: proportion, dtype: float64</code></pre>
   width: 1px;
 }
 
-#sk-container-id-3 div.sk-dashed-wrapped {
+#sk-container-id-1 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
@@ -881,7 +881,7 @@ Name: proportion, dtype: float64</code></pre>
   background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-3 div.sk-container {
+#sk-container-id-1 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -891,7 +891,7 @@ Name: proportion, dtype: float64</code></pre>
   position: relative;
 }
 
-#sk-container-id-3 div.sk-text-repr-fallback {
+#sk-container-id-1 div.sk-text-repr-fallback {
   display: none;
 }
 
@@ -907,14 +907,14 @@ div.sk-item {
 
 /* Parallel-specific style estimator block */
 
-#sk-container-id-3 div.sk-parallel-item::after {
+#sk-container-id-1 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
 
-#sk-container-id-3 div.sk-parallel {
+#sk-container-id-1 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -922,28 +922,28 @@ div.sk-item {
   position: relative;
 }
 
-#sk-container-id-3 div.sk-parallel-item {
+#sk-container-id-1 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
 
-#sk-container-id-3 div.sk-parallel-item:first-child::after {
+#sk-container-id-1 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
 
-#sk-container-id-3 div.sk-parallel-item:last-child::after {
+#sk-container-id-1 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
 
-#sk-container-id-3 div.sk-parallel-item:only-child::after {
+#sk-container-id-1 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 
 /* Serial-specific style estimator block */
 
-#sk-container-id-3 div.sk-serial {
+#sk-container-id-1 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -961,14 +961,14 @@ clickable and can be expanded/collapsed.
 
 /* Pipeline and ColumnTransformer style (default) */
 
-#sk-container-id-3 div.sk-toggleable {
+#sk-container-id-1 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 
 /* Toggleable label */
-#sk-container-id-3 label.sk-toggleable__label {
+#sk-container-id-1 label.sk-toggleable__label {
   cursor: pointer;
   display: flex;
   width: 100%;
@@ -981,13 +981,13 @@ clickable and can be expanded/collapsed.
   gap: 0.5em;
 }
 
-#sk-container-id-3 label.sk-toggleable__label .caption {
+#sk-container-id-1 label.sk-toggleable__label .caption {
   font-size: 0.6rem;
   font-weight: lighter;
   color: var(--sklearn-color-text-muted);
 }
 
-#sk-container-id-3 label.sk-toggleable__label-arrow:before {
+#sk-container-id-1 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
@@ -995,13 +995,13 @@ clickable and can be expanded/collapsed.
   color: var(--sklearn-color-icon);
 }
 
-#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 
 /* Toggleable content - dropdown */
 
-#sk-container-id-3 div.sk-toggleable__content {
+#sk-container-id-1 div.sk-toggleable__content {
   max-height: 0;
   max-width: 0;
   overflow: hidden;
@@ -1010,12 +1010,12 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content.fitted {
+#sk-container-id-1 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content pre {
+#sk-container-id-1 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
@@ -1023,79 +1023,79 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-toggleable__content.fitted pre {
+#sk-container-id-1 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   max-height: 200px;
   max-width: 100%;
   overflow: auto;
 }
 
-#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 
 /* Pipeline/ColumnTransformer-specific style */
 
-#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator-specific style */
 
 /* Colorize estimator box */
-#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-3 div.sk-label label.sk-toggleable__label,
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-1 div.sk-label label.sk-toggleable__label,
+#sk-container-id-1 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 
 /* On hover, darken the color of the background */
-#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
 /* Label box, darken color on hover, fitted */
-#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator label */
 
-#sk-container-id-3 div.sk-label label {
+#sk-container-id-1 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   display: inline-block;
   line-height: 1.2em;
 }
 
-#sk-container-id-3 div.sk-label-container {
+#sk-container-id-1 div.sk-label-container {
   text-align: center;
 }
 
 /* Estimator-specific */
-#sk-container-id-3 div.sk-estimator {
+#sk-container-id-1 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -1105,18 +1105,18 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted {
+#sk-container-id-1 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
 /* on hover */
-#sk-container-id-3 div.sk-estimator:hover {
+#sk-container-id-1 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-3 div.sk-estimator.fitted:hover {
+#sk-container-id-1 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -1204,7 +1204,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-3 a.estimator_doc_link {
+#sk-container-id-1 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -1219,25 +1219,25 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted {
+#sk-container-id-1 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-3 a.estimator_doc_link:hover {
+#sk-container-id-1 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-3 a.estimator_doc_link.fitted:hover {
+#sk-container-id-1 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
                                                                     'min': 0.02},
                                                              'quality_score': {'min': 0.01}},
                                          variable_names=['person_age',
@@ -1252,7 +1252,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
                                                          'cb_person_default_on_file',
                                                          'cb_person_cred_hist_length']),
           estimator=LogisticRegression(), scaling_method='min_max',
-          scaling_method_params={'max': 850, 'min': 300})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox"><label for="sk-estimator-id-11" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>Scorecard</div></div><div><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
+          scaling_method_params={'max': 850, 'min': 300})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox"><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>Scorecard</div></div><div><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
                                                                     'min': 0.02},
                                                              'quality_score': {'min': 0.01}},
                                          variable_names=['person_age',
@@ -1267,24 +1267,24 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
                                                          'cb_person_default_on_file',
                                                          'cb_person_cred_hist_length']),
           estimator=LogisticRegression(), scaling_method='min_max',
-          scaling_method_params={'max': 850, 'min': 300})</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-12" type="checkbox"><label for="sk-estimator-id-12" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>binning_process: BinningProcess</div></div></label><div class="sk-toggleable__content fitted"><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
+          scaling_method_params={'max': 850, 'min': 300})</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox"><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>binning_process: BinningProcess</div></div></label><div class="sk-toggleable__content fitted"><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
                                    'quality_score': {'min': 0.01}},
                variable_names=['person_age', 'person_income',
                                'person_home_ownership', 'person_emp_length',
                                'loan_intent', 'loan_grade', 'loan_amnt',
                                'loan_int_rate', 'loan_percent_income',
                                'cb_person_default_on_file',
-                               'cb_person_cred_hist_length'])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox"><label for="sk-estimator-id-13" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>BinningProcess</div></div></label><div class="sk-toggleable__content fitted"><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
+                               'cb_person_cred_hist_length'])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox"><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>BinningProcess</div></div></label><div class="sk-toggleable__content fitted"><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
                                    'quality_score': {'min': 0.01}},
                variable_names=['person_age', 'person_income',
                                'person_home_ownership', 'person_emp_length',
                                'loan_intent', 'loan_grade', 'loan_amnt',
                                'loan_int_rate', 'loan_percent_income',
                                'cb_person_default_on_file',
-                               'cb_person_cred_hist_length'])</pre></div> </div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-14" type="checkbox"><label for="sk-estimator-id-14" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>estimator: LogisticRegression</div></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-15" type="checkbox"><label for="sk-estimator-id-15" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div></div></div></div>
+                               'cb_person_cred_hist_length'])</pre></div> </div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox"><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>estimator: LogisticRegression</div></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox"><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div></div></div></div>
 </div>
 </div>
-<div id="bb03f4ac" class="cell" data-execution_count="26">
+<div id="bb03f4ac" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>scorecard.information(print_level<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1305,7 +1305,7 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
   End options
 
   Statistics
-    Number of records                  17468
+    Number of records                  12227
     Number of variables                   11
     Target type                       binary
 
@@ -1314,40 +1314,1056 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
     Number of selected                     7
 
   Timing
-    Total time                          0.88 sec
-    Binning process                     0.83 sec   ( 94.01%)
-    Estimator                           0.03 sec   (  3.02%)
-    Build scorecard                     0.03 sec   (  2.92%)
+    Total time                          0.70 sec
+    Binning process                     0.66 sec   ( 94.73%)
+    Estimator                           0.02 sec   (  2.40%)
+    Build scorecard                     0.02 sec   (  2.75%)
       rounding                          0.00 sec   (  0.00%)
 </code></pre>
+</div>
+</div>
+<div id="a31f0b09" class="cell" data-execution_count="34">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>scorecard.table(style<span class="op">=</span><span class="st">"detailed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th">Bin id</th>
+<th data-quarto-table-cell-role="th">Bin</th>
+<th data-quarto-table-cell-role="th">Count</th>
+<th data-quarto-table-cell-role="th">Count (%)</th>
+<th data-quarto-table-cell-role="th">Non-event</th>
+<th data-quarto-table-cell-role="th">Event</th>
+<th data-quarto-table-cell-role="th">Event rate</th>
+<th data-quarto-table-cell-role="th">WoE</th>
+<th data-quarto-table-cell-role="th">IV</th>
+<th data-quarto-table-cell-role="th">JS</th>
+<th data-quarto-table-cell-role="th">Coefficient</th>
+<th data-quarto-table-cell-role="th">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>person_income</td>
+<td>0</td>
+<td>(-inf, 24204.0000)</td>
+<td>686</td>
+<td>0.056105</td>
+<td>309</td>
+<td>377</td>
+<td>0.549563</td>
+<td>-1.483227</td>
+<td>0.163069</td>
+<td>0.018699</td>
+<td>-0.872451</td>
+<td>31.491920</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>person_income</td>
+<td>1</td>
+<td>[24204.0000, 34991.5000)</td>
+<td>1524</td>
+<td>0.124642</td>
+<td>891</td>
+<td>633</td>
+<td>0.415354</td>
+<td>-0.942449</td>
+<td>0.137346</td>
+<td>0.016560</td>
+<td>-0.872451</td>
+<td>52.224590</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>person_income</td>
+<td>2</td>
+<td>[34991.5000, 39780.0000)</td>
+<td>846</td>
+<td>0.069191</td>
+<td>605</td>
+<td>241</td>
+<td>0.284870</td>
+<td>-0.363892</td>
+<td>0.010091</td>
+<td>0.001254</td>
+<td>-0.872451</td>
+<td>74.405677</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>person_income</td>
+<td>3</td>
+<td>[39780.0000, 49994.0000)</td>
+<td>1849</td>
+<td>0.151223</td>
+<td>1453</td>
+<td>396</td>
+<td>0.214170</td>
+<td>0.015648</td>
+<td>0.000037</td>
+<td>0.000005</td>
+<td>-0.872451</td>
+<td>88.956707</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>person_income</td>
+<td>4</td>
+<td>[49994.0000, 59748.5000)</td>
+<td>1636</td>
+<td>0.133802</td>
+<td>1301</td>
+<td>335</td>
+<td>0.204768</td>
+<td>0.072435</td>
+<td>0.000688</td>
+<td>0.000086</td>
+<td>-0.872451</td>
+<td>91.133822</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>person_income</td>
+<td>5</td>
+<td>[59748.5000, 79428.0000)</td>
+<td>2571</td>
+<td>0.210272</td>
+<td>2196</td>
+<td>375</td>
+<td>0.145858</td>
+<td>0.483144</td>
+<td>0.042453</td>
+<td>0.005256</td>
+<td>-0.872451</td>
+<td>106.879825</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>person_income</td>
+<td>6</td>
+<td>[79428.0000, 89385.0000)</td>
+<td>753</td>
+<td>0.061585</td>
+<td>677</td>
+<td>76</td>
+<td>0.100930</td>
+<td>0.902615</td>
+<td>0.037936</td>
+<td>0.004587</td>
+<td>-0.872451</td>
+<td>122.961763</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>person_income</td>
+<td>7</td>
+<td>[89385.0000, inf)</td>
+<td>2362</td>
+<td>0.193179</td>
+<td>2144</td>
+<td>218</td>
+<td>0.092295</td>
+<td>1.001610</td>
+<td>0.141888</td>
+<td>0.017030</td>
+<td>-0.872451</td>
+<td>126.757113</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>person_income</td>
+<td>8</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.872451</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>person_income</td>
+<td>9</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.872451</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>person_home_ownership</td>
+<td>0</td>
+<td>[OWN]</td>
+<td>922</td>
+<td>0.075407</td>
+<td>870</td>
+<td>52</td>
+<td>0.056399</td>
+<td>1.532926</td>
+<td>0.109201</td>
+<td>0.012453</td>
+<td>-0.954617</td>
+<td>152.661889</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>person_home_ownership</td>
+<td>1</td>
+<td>[MORTGAGE]</td>
+<td>5074</td>
+<td>0.414983</td>
+<td>4441</td>
+<td>633</td>
+<td>0.124754</td>
+<td>0.663841</td>
+<td>0.149355</td>
+<td>0.018334</td>
+<td>-0.954617</td>
+<td>116.204420</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>person_home_ownership</td>
+<td>2</td>
+<td>[RENT, OTHER]</td>
+<td>6231</td>
+<td>0.509610</td>
+<td>4265</td>
+<td>1966</td>
+<td>0.315519</td>
+<td>-0.509882</td>
+<td>0.151039</td>
+<td>0.018678</td>
+<td>-0.954617</td>
+<td>66.967605</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>person_home_ownership</td>
+<td>3</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.954617</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>person_home_ownership</td>
+<td>4</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.954617</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>loan_intent</td>
+<td>0</td>
+<td>[VENTURE]</td>
+<td>2119</td>
+<td>0.173305</td>
+<td>1812</td>
+<td>307</td>
+<td>0.144880</td>
+<td>0.491016</td>
+<td>0.036049</td>
+<td>0.004461</td>
+<td>-1.452636</td>
+<td>119.700261</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>loan_intent</td>
+<td>1</td>
+<td>[EDUCATION]</td>
+<td>2366</td>
+<td>0.193506</td>
+<td>1977</td>
+<td>389</td>
+<td>0.164413</td>
+<td>0.341433</td>
+<td>0.020389</td>
+<td>0.002536</td>
+<td>-1.452636</td>
+<td>110.151829</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>loan_intent</td>
+<td>2</td>
+<td>[PERSONAL]</td>
+<td>2107</td>
+<td>0.172324</td>
+<td>1692</td>
+<td>415</td>
+<td>0.196963</td>
+<td>0.121065</td>
+<td>0.002439</td>
+<td>0.000305</td>
+<td>-1.452636</td>
+<td>96.084830</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>loan_intent</td>
+<td>3</td>
+<td>[HOMEIMPROVEMENT]</td>
+<td>1431</td>
+<td>0.117036</td>
+<td>1069</td>
+<td>362</td>
+<td>0.252970</td>
+<td>-0.201488</td>
+<td>0.005021</td>
+<td>0.000627</td>
+<td>-1.452636</td>
+<td>75.494964</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>loan_intent</td>
+<td>4</td>
+<td>[MEDICAL]</td>
+<td>2250</td>
+<td>0.184019</td>
+<td>1651</td>
+<td>599</td>
+<td>0.266222</td>
+<td>-0.270448</td>
+<td>0.014480</td>
+<td>0.001805</td>
+<td>-1.452636</td>
+<td>71.092981</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>loan_intent</td>
+<td>5</td>
+<td>[DEBTCONSOLIDATION]</td>
+<td>1954</td>
+<td>0.159810</td>
+<td>1375</td>
+<td>579</td>
+<td>0.296315</td>
+<td>-0.419417</td>
+<td>0.031381</td>
+<td>0.003894</td>
+<td>-1.452636</td>
+<td>61.583739</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>loan_intent</td>
+<td>6</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-1.452636</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>loan_intent</td>
+<td>7</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-1.452636</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>loan_grade</td>
+<td>0</td>
+<td>[A]</td>
+<td>4026</td>
+<td>0.329271</td>
+<td>3628</td>
+<td>398</td>
+<td>0.098857</td>
+<td>0.925662</td>
+<td>0.211728</td>
+<td>0.025560</td>
+<td>-1.259309</td>
+<td>139.581510</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>loan_grade</td>
+<td>1</td>
+<td>[B]</td>
+<td>3883</td>
+<td>0.317576</td>
+<td>3288</td>
+<td>595</td>
+<td>0.153232</td>
+<td>0.425150</td>
+<td>0.050557</td>
+<td>0.006272</td>
+<td>-1.259309</td>
+<td>111.883953</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>loan_grade</td>
+<td>2</td>
+<td>[C]</td>
+<td>2417</td>
+<td>0.197677</td>
+<td>1919</td>
+<td>498</td>
+<td>0.206041</td>
+<td>0.064636</td>
+<td>0.000811</td>
+<td>0.000101</td>
+<td>-1.259309</td>
+<td>91.933650</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>loan_grade</td>
+<td>3</td>
+<td>[D, E, F, G]</td>
+<td>1901</td>
+<td>0.155476</td>
+<td>741</td>
+<td>1160</td>
+<td>0.610205</td>
+<td>-1.732498</td>
+<td>0.624028</td>
+<td>0.069511</td>
+<td>-1.259309</td>
+<td>-7.517069</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>loan_grade</td>
+<td>4</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-1.259309</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>loan_grade</td>
+<td>5</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-1.259309</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>loan_amnt</td>
+<td>0</td>
+<td>(-inf, 2912.5000)</td>
+<td>1113</td>
+<td>0.091028</td>
+<td>865</td>
+<td>248</td>
+<td>0.222821</td>
+<td>-0.035022</td>
+<td>0.000113</td>
+<td>0.000014</td>
+<td>-0.434198</td>
+<td>87.688537</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>loan_amnt</td>
+<td>1</td>
+<td>[2912.5000, 4787.5000)</td>
+<td>1506</td>
+<td>0.123170</td>
+<td>1218</td>
+<td>288</td>
+<td>0.191235</td>
+<td>0.157682</td>
+<td>0.002926</td>
+<td>0.000365</td>
+<td>-0.434198</td>
+<td>91.365373</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>loan_amnt</td>
+<td>2</td>
+<td>[4787.5000, 5412.5000)</td>
+<td>1013</td>
+<td>0.082849</td>
+<td>838</td>
+<td>175</td>
+<td>0.172754</td>
+<td>0.281909</td>
+<td>0.006060</td>
+<td>0.000755</td>
+<td>-0.434198</td>
+<td>93.735653</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>loan_amnt</td>
+<td>3</td>
+<td>[5412.5000, 6012.5000)</td>
+<td>886</td>
+<td>0.072463</td>
+<td>755</td>
+<td>131</td>
+<td>0.147856</td>
+<td>0.467197</td>
+<td>0.013749</td>
+<td>0.001703</td>
+<td>-0.434198</td>
+<td>97.270992</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>loan_amnt</td>
+<td>4</td>
+<td>[6012.5000, 9225.0000)</td>
+<td>2252</td>
+<td>0.184183</td>
+<td>1848</td>
+<td>404</td>
+<td>0.179396</td>
+<td>0.236121</td>
+<td>0.009583</td>
+<td>0.001195</td>
+<td>-0.434198</td>
+<td>92.862013</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>loan_amnt</td>
+<td>5</td>
+<td>[9225.0000, 10587.5000)</td>
+<td>1309</td>
+<td>0.107058</td>
+<td>1047</td>
+<td>262</td>
+<td>0.200153</td>
+<td>0.101017</td>
+<td>0.001061</td>
+<td>0.000133</td>
+<td>-0.434198</td>
+<td>90.284188</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>loan_amnt</td>
+<td>6</td>
+<td>[10587.5000, 14450.0000)</td>
+<td>1645</td>
+<td>0.134538</td>
+<td>1299</td>
+<td>346</td>
+<td>0.210334</td>
+<td>0.038588</td>
+<td>0.000198</td>
+<td>0.000025</td>
+<td>-0.434198</td>
+<td>89.093040</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>loan_amnt</td>
+<td>7</td>
+<td>[14450.0000, 18087.5000)</td>
+<td>1190</td>
+<td>0.097326</td>
+<td>859</td>
+<td>331</td>
+<td>0.278151</td>
+<td>-0.330672</td>
+<td>0.011625</td>
+<td>0.001447</td>
+<td>-0.434198</td>
+<td>82.047470</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>loan_amnt</td>
+<td>8</td>
+<td>[18087.5000, 22225.0000)</td>
+<td>622</td>
+<td>0.050871</td>
+<td>416</td>
+<td>206</td>
+<td>0.331190</td>
+<td>-0.581514</td>
+<td>0.019925</td>
+<td>0.002456</td>
+<td>-0.434198</td>
+<td>77.261363</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>loan_amnt</td>
+<td>9</td>
+<td>[22225.0000, inf)</td>
+<td>691</td>
+<td>0.056514</td>
+<td>431</td>
+<td>260</td>
+<td>0.376266</td>
+<td>-0.778897</td>
+<td>0.041334</td>
+<td>0.005040</td>
+<td>-0.434198</td>
+<td>73.495262</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>loan_amnt</td>
+<td>10</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.434198</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">11</td>
+<td>loan_amnt</td>
+<td>11</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.434198</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>loan_percent_income</td>
+<td>0</td>
+<td>(-inf, 0.0650)</td>
+<td>1817</td>
+<td>0.148606</td>
+<td>1622</td>
+<td>195</td>
+<td>0.107320</td>
+<td>0.834093</td>
+<td>0.079927</td>
+<td>0.009711</td>
+<td>-0.999749</td>
+<td>125.000577</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>loan_percent_income</td>
+<td>1</td>
+<td>[0.0650, 0.1350)</td>
+<td>3738</td>
+<td>0.305717</td>
+<td>3276</td>
+<td>462</td>
+<td>0.123596</td>
+<td>0.674491</td>
+<td>0.113201</td>
+<td>0.013888</td>
+<td>-0.999749</td>
+<td>117.988851</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>loan_percent_income</td>
+<td>2</td>
+<td>[0.1350, 0.1550)</td>
+<td>985</td>
+<td>0.080559</td>
+<td>844</td>
+<td>141</td>
+<td>0.143147</td>
+<td>0.505070</td>
+<td>0.017652</td>
+<td>0.002183</td>
+<td>-0.999749</td>
+<td>110.545758</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>loan_percent_income</td>
+<td>3</td>
+<td>[0.1550, 0.1750)</td>
+<td>885</td>
+<td>0.072381</td>
+<td>733</td>
+<td>152</td>
+<td>0.171751</td>
+<td>0.288942</td>
+<td>0.005550</td>
+<td>0.000691</td>
+<td>-0.999749</td>
+<td>101.050731</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>loan_percent_income</td>
+<td>4</td>
+<td>[0.1750, 0.2150)</td>
+<td>1457</td>
+<td>0.119163</td>
+<td>1196</td>
+<td>261</td>
+<td>0.179135</td>
+<td>0.237894</td>
+<td>0.006290</td>
+<td>0.000784</td>
+<td>-0.999749</td>
+<td>98.808078</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>loan_percent_income</td>
+<td>5</td>
+<td>[0.2150, 0.2550)</td>
+<td>1050</td>
+<td>0.085876</td>
+<td>833</td>
+<td>217</td>
+<td>0.206667</td>
+<td>0.060813</td>
+<td>0.000312</td>
+<td>0.000039</td>
+<td>-0.999749</td>
+<td>91.028449</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">6</td>
+<td>loan_percent_income</td>
+<td>6</td>
+<td>[0.2550, 0.3050)</td>
+<td>888</td>
+<td>0.072626</td>
+<td>663</td>
+<td>225</td>
+<td>0.253378</td>
+<td>-0.203648</td>
+<td>0.003185</td>
+<td>0.000397</td>
+<td>-0.999749</td>
+<td>79.409975</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>loan_percent_income</td>
+<td>7</td>
+<td>[0.3050, 0.3750)</td>
+<td>759</td>
+<td>0.062076</td>
+<td>241</td>
+<td>518</td>
+<td>0.682477</td>
+<td>-2.049501</td>
+<td>0.348888</td>
+<td>0.037291</td>
+<td>-0.999749</td>
+<td>-1.683032</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>loan_percent_income</td>
+<td>8</td>
+<td>[0.3750, inf)</td>
+<td>648</td>
+<td>0.052997</td>
+<td>168</td>
+<td>480</td>
+<td>0.740741</td>
+<td>-2.334145</td>
+<td>0.381679</td>
+<td>0.039173</td>
+<td>-0.999749</td>
+<td>-14.188157</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">9</td>
+<td>loan_percent_income</td>
+<td>9</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.999749</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>loan_percent_income</td>
+<td>10</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>-0.999749</td>
+<td>88.356769</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>cb_person_default_on_file</td>
+<td>0</td>
+<td>[N]</td>
+<td>10036</td>
+<td>0.820806</td>
+<td>8227</td>
+<td>1809</td>
+<td>0.180251</td>
+<td>0.230324</td>
+<td>0.040708</td>
+<td>0.005077</td>
+<td>0.018779</td>
+<td>88.166702</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>cb_person_default_on_file</td>
+<td>1</td>
+<td>[Y]</td>
+<td>2191</td>
+<td>0.179194</td>
+<td>1349</td>
+<td>842</td>
+<td>0.384299</td>
+<td>-0.812984</td>
+<td>0.143689</td>
+<td>0.017482</td>
+<td>0.018779</td>
+<td>89.027658</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>cb_person_default_on_file</td>
+<td>2</td>
+<td>Special</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.018779</td>
+<td>88.356769</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>cb_person_default_on_file</td>
+<td>3</td>
+<td>Missing</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0</td>
+<td>0</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.018779</td>
+<td>88.356769</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="6a89e3d0" class="cell" data-execution_count="35">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sc <span class="op">=</span> scorecard.table(style<span class="op">=</span><span class="st">"summary"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sc.groupby(<span class="st">"Variable"</span>).agg({<span class="st">'Points'</span> : [np.<span class="bu">min</span>, np.<span class="bu">max</span>]}).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>Points  min    300.0
+        max    850.0
+dtype: float64</code></pre>
+</div>
+</div>
+</section>
+<section id="scorecard-performance" class="level2">
+<h2 class="anchored" data-anchor-id="scorecard-performance">Scorecard Performance</h2>
+<div id="29713622" class="cell" data-execution_count="36">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> scorecard.predict_proba(X)[:, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="c7730d35" class="cell" data-execution_count="45">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">10</span>))  <span class="co"># 2 rows, 2 columns</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.sca(axes[<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>plot_auc_roc(y, y_pred)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"AUC-ROC Curve"</span>)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>plt.sca(axes[<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>plot_cap(y, y_pred)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Cumulative Accuracy Profile (CAP)"</span>)</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>plt.sca(axes[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>plot_ks(y, y_pred)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Kolmogorov–Smirnov (KS) Curve"</span>)</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>plt.sca(axes[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> scorecard.score(X_test)</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> y_test <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>plt.hist(score[mask], label<span class="op">=</span><span class="st">"non-event"</span>, color<span class="op">=</span><span class="st">"b"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>plt.hist(score[<span class="op">~</span>mask], label<span class="op">=</span><span class="st">"event"</span>, color<span class="op">=</span><span class="st">"r"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Score Distribution"</span>)</span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="code_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 350x262.5 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+<div id="2842780e" class="cell" data-execution_count="40">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> scorecard.score(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="99773a45" class="cell" data-execution_count="42">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> y_test <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>plt.hist(score[mask], label<span class="op">=</span><span class="st">"non-event"</span>, color<span class="op">=</span><span class="st">"b"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.hist(score[<span class="op">~</span>mask], label<span class="op">=</span><span class="st">"event"</span>, color<span class="op">=</span><span class="st">"r"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"score"</span>)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="code_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="monitoring" class="level2">
 <h2 class="anchored" data-anchor-id="monitoring">Monitoring</h2>
-<div id="bd8ddd43" class="cell" data-execution_count="57">
+<div id="bd8ddd43" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>monitoring <span class="op">=</span> ScorecardMonitoring(scorecard<span class="op">=</span>scorecard, psi_method<span class="op">=</span><span class="st">"cart"</span>,</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>                                 psi_n_bins<span class="op">=</span><span class="dv">10</span>, verbose<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>monitoring <span class="op">=</span> ScorecardMonitoring(scorecard<span class="op">=</span>scorecard, psi_method<span class="op">=</span><span class="st">"cart"</span>,</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>                                 psi_n_bins<span class="op">=</span><span class="dv">10</span>, verbose<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="8aa3202d" class="cell" data-execution_count="58">
+<div id="8aa3202d" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>monitoring.fit(X_test, y_test, X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>monitoring.fit(X_test, y_test, X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>2025-11-06 21:04:16,013 | INFO : Monitoring started.
-2025-11-06 21:04:16,014 | INFO : Options: check parameters.
-2025-11-06 21:04:16,015 | INFO : System stability analysis started.
-2025-11-06 21:04:16,107 | INFO : System stability analysis terminated. Time: 0.0909s
-2025-11-06 21:04:16,108 | INFO : Variable analysis started.
-2025-11-06 21:04:16,145 | INFO : Variable analysis terminated. Time: 0.0354s
-2025-11-06 21:04:16,147 | INFO : Monitoring terminated. Time: 0.1329s</code></pre>
+<pre><code>2025-11-06 21:14:36,420 | INFO : Monitoring started.
+2025-11-06 21:14:36,421 | INFO : Options: check parameters.
+2025-11-06 21:14:36,424 | INFO : System stability analysis started.
+2025-11-06 21:14:36,507 | INFO : System stability analysis terminated. Time: 0.0829s
+2025-11-06 21:14:36,508 | INFO : Variable analysis started.
+2025-11-06 21:14:36,535 | INFO : Variable analysis terminated. Time: 0.0263s
+2025-11-06 21:14:36,536 | INFO : Monitoring terminated. Time: 0.1153s</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="58">
-<style>#sk-container-id-4 {
+<div class="cell-output cell-output-display" data-execution_count="24">
+<style>#sk-container-id-2 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: #000;
   --sklearn-color-text-muted: #666;
@@ -1378,15 +2394,15 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
   }
 }
 
-#sk-container-id-4 {
+#sk-container-id-2 {
   color: var(--sklearn-color-text);
 }
 
-#sk-container-id-4 pre {
+#sk-container-id-2 pre {
   padding: 0;
 }
 
-#sk-container-id-4 input.sk-hidden--visually {
+#sk-container-id-2 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1398,7 +2414,7 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
   width: 1px;
 }
 
-#sk-container-id-4 div.sk-dashed-wrapped {
+#sk-container-id-2 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
@@ -1406,7 +2422,7 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
   background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-4 div.sk-container {
+#sk-container-id-2 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -1416,7 +2432,7 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
   position: relative;
 }
 
-#sk-container-id-4 div.sk-text-repr-fallback {
+#sk-container-id-2 div.sk-text-repr-fallback {
   display: none;
 }
 
@@ -1432,14 +2448,14 @@ div.sk-item {
 
 /* Parallel-specific style estimator block */
 
-#sk-container-id-4 div.sk-parallel-item::after {
+#sk-container-id-2 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
 
-#sk-container-id-4 div.sk-parallel {
+#sk-container-id-2 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -1447,28 +2463,28 @@ div.sk-item {
   position: relative;
 }
 
-#sk-container-id-4 div.sk-parallel-item {
+#sk-container-id-2 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
 
-#sk-container-id-4 div.sk-parallel-item:first-child::after {
+#sk-container-id-2 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
 
-#sk-container-id-4 div.sk-parallel-item:last-child::after {
+#sk-container-id-2 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
 
-#sk-container-id-4 div.sk-parallel-item:only-child::after {
+#sk-container-id-2 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 
 /* Serial-specific style estimator block */
 
-#sk-container-id-4 div.sk-serial {
+#sk-container-id-2 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1486,14 +2502,14 @@ clickable and can be expanded/collapsed.
 
 /* Pipeline and ColumnTransformer style (default) */
 
-#sk-container-id-4 div.sk-toggleable {
+#sk-container-id-2 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 
 /* Toggleable label */
-#sk-container-id-4 label.sk-toggleable__label {
+#sk-container-id-2 label.sk-toggleable__label {
   cursor: pointer;
   display: flex;
   width: 100%;
@@ -1506,13 +2522,13 @@ clickable and can be expanded/collapsed.
   gap: 0.5em;
 }
 
-#sk-container-id-4 label.sk-toggleable__label .caption {
+#sk-container-id-2 label.sk-toggleable__label .caption {
   font-size: 0.6rem;
   font-weight: lighter;
   color: var(--sklearn-color-text-muted);
 }
 
-#sk-container-id-4 label.sk-toggleable__label-arrow:before {
+#sk-container-id-2 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
@@ -1520,13 +2536,13 @@ clickable and can be expanded/collapsed.
   color: var(--sklearn-color-icon);
 }
 
-#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 
 /* Toggleable content - dropdown */
 
-#sk-container-id-4 div.sk-toggleable__content {
+#sk-container-id-2 div.sk-toggleable__content {
   max-height: 0;
   max-width: 0;
   overflow: hidden;
@@ -1535,12 +2551,12 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-4 div.sk-toggleable__content.fitted {
+#sk-container-id-2 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-4 div.sk-toggleable__content pre {
+#sk-container-id-2 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
@@ -1548,79 +2564,79 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-4 div.sk-toggleable__content.fitted pre {
+#sk-container-id-2 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   max-height: 200px;
   max-width: 100%;
   overflow: auto;
 }
 
-#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 
 /* Pipeline/ColumnTransformer-specific style */
 
-#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-4 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator-specific style */
 
 /* Colorize estimator box */
-#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-4 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-4 div.sk-label label.sk-toggleable__label,
-#sk-container-id-4 div.sk-label label {
+#sk-container-id-2 div.sk-label label.sk-toggleable__label,
+#sk-container-id-2 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 
 /* On hover, darken the color of the background */
-#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
 /* Label box, darken color on hover, fitted */
-#sk-container-id-4 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator label */
 
-#sk-container-id-4 div.sk-label label {
+#sk-container-id-2 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   display: inline-block;
   line-height: 1.2em;
 }
 
-#sk-container-id-4 div.sk-label-container {
+#sk-container-id-2 div.sk-label-container {
   text-align: center;
 }
 
 /* Estimator-specific */
-#sk-container-id-4 div.sk-estimator {
+#sk-container-id-2 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -1630,18 +2646,18 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-4 div.sk-estimator.fitted {
+#sk-container-id-2 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
 /* on hover */
-#sk-container-id-4 div.sk-estimator:hover {
+#sk-container-id-2 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-4 div.sk-estimator.fitted:hover {
+#sk-container-id-2 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -1729,7 +2745,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-4 a.estimator_doc_link {
+#sk-container-id-2 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -1744,25 +2760,25 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-4 a.estimator_doc_link.fitted {
+#sk-container-id-2 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-4 a.estimator_doc_link:hover {
+#sk-container-id-2 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-4 a.estimator_doc_link.fitted:hover {
+#sk-container-id-2 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>ScorecardMonitoring(psi_n_bins=10,
+</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>ScorecardMonitoring(psi_n_bins=10,
                     scorecard=Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
                                                                                                   'min': 0.02},
                                                                                            'quality_score': {'min': 0.01}},
@@ -1781,7 +2797,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
                                         scaling_method='min_max',
                                         scaling_method_params={'max': 850,
                                                                'min': 300}),
-                    verbose=True)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-16" type="checkbox"><label for="sk-estimator-id-16" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>ScorecardMonitoring</div></div><div><span class="sk-estimator-doc-link ">i<span>Not fitted</span></span></div></label><div class="sk-toggleable__content "><pre>ScorecardMonitoring(psi_n_bins=10,
+                    verbose=True)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox"><label for="sk-estimator-id-6" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>ScorecardMonitoring</div></div><div><span class="sk-estimator-doc-link ">i<span>Not fitted</span></span></div></label><div class="sk-toggleable__content "><pre>ScorecardMonitoring(psi_n_bins=10,
                     scorecard=Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
                                                                                                   'min': 0.02},
                                                                                            'quality_score': {'min': 0.01}},
@@ -1800,7 +2816,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
                                         scaling_method='min_max',
                                         scaling_method_params={'max': 850,
                                                                'min': 300}),
-                    verbose=True)</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-17" type="checkbox"><label for="sk-estimator-id-17" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>scorecard: Scorecard</div></div></label><div class="sk-toggleable__content "><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
+                    verbose=True)</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox"><label for="sk-estimator-id-7" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>scorecard: Scorecard</div></div></label><div class="sk-toggleable__content "><pre>Scorecard(binning_process=BinningProcess(selection_criteria={'iv': {'max': 1,
                                                                     'min': 0.02},
                                                              'quality_score': {'min': 0.01}},
                                          variable_names=['person_age',
@@ -1815,27 +2831,27 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
                                                          'cb_person_default_on_file',
                                                          'cb_person_cred_hist_length']),
           estimator=LogisticRegression(), scaling_method='min_max',
-          scaling_method_params={'max': 850, 'min': 300})</pre></div> </div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-18" type="checkbox"><label for="sk-estimator-id-18" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>binning_process: BinningProcess</div></div></label><div class="sk-toggleable__content "><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
+          scaling_method_params={'max': 850, 'min': 300})</pre></div> </div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox"><label for="sk-estimator-id-8" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>binning_process: BinningProcess</div></div></label><div class="sk-toggleable__content "><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
                                    'quality_score': {'min': 0.01}},
                variable_names=['person_age', 'person_income',
                                'person_home_ownership', 'person_emp_length',
                                'loan_intent', 'loan_grade', 'loan_amnt',
                                'loan_int_rate', 'loan_percent_income',
                                'cb_person_default_on_file',
-                               'cb_person_cred_hist_length'])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-19" type="checkbox"><label for="sk-estimator-id-19" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>BinningProcess</div></div></label><div class="sk-toggleable__content "><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
+                               'cb_person_cred_hist_length'])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox"><label for="sk-estimator-id-9" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>BinningProcess</div></div></label><div class="sk-toggleable__content "><pre>BinningProcess(selection_criteria={'iv': {'max': 1, 'min': 0.02},
                                    'quality_score': {'min': 0.01}},
                variable_names=['person_age', 'person_income',
                                'person_home_ownership', 'person_emp_length',
                                'loan_intent', 'loan_grade', 'loan_amnt',
                                'loan_int_rate', 'loan_percent_income',
                                'cb_person_default_on_file',
-                               'cb_person_cred_hist_length'])</pre></div> </div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-20" type="checkbox"><label for="sk-estimator-id-20" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>estimator: LogisticRegression</div></div></label><div class="sk-toggleable__content "><pre>LogisticRegression()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-21" type="checkbox"><label for="sk-estimator-id-21" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link " rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content "><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+                               'cb_person_cred_hist_length'])</pre></div> </div></div></div></div></div><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-10" type="checkbox"><label for="sk-estimator-id-10" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>estimator: LogisticRegression</div></div></label><div class="sk-toggleable__content "><pre>LogisticRegression()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox"><label for="sk-estimator-id-11" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link " rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content "><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 </div>
 </div>
-<div id="441523c1" class="cell" data-execution_count="59">
+<div id="441523c1" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>monitoring.information(print_level<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>monitoring.information(print_level<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>optbinning (Version 0.20.1)
@@ -1857,18 +2873,18 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
     Target type                       binary
 
   Timing
-    Total time                          0.13 sec
-    System stability                    0.09 sec   ( 68.35%)
-    Variables stability                 0.04 sec   ( 26.63%)
+    Total time                          0.12 sec
+    System stability                    0.08 sec   ( 71.89%)
+    Variables stability                 0.03 sec   ( 22.82%)
 </code></pre>
 </div>
 </div>
-<div id="b38454e6" class="cell" data-execution_count="60">
+<div id="b38454e6" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_table()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_table()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="60">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <div>
 
 
@@ -1990,11 +3006,11 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
 </div>
 </div>
 </div>
-<div id="4c8c0765" class="cell">
+<div id="4c8c0765" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>monitoring.psi_plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>monitoring.psi_plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 1000x400 with 0 Axes&gt;</code></pre>
@@ -2002,17 +3018,17 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="code_files/figure-html/cell-27-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="code_files/figure-html/cell-33-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="c35549d3" class="cell" data-execution_count="64">
+<div id="c35549d3" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>monitoring.tests_table()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>monitoring.tests_table()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="64">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <div>
 
 
@@ -2136,10 +3152,10 @@ Copyright (c) 2019-2024 Guillermo Navas-Palencia, Apache License 2.0
 </div>
 </div>
 </div>
-<div id="97b9a336" class="cell" data-execution_count="68">
+<div id="97b9a336" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>monitoring.system_stability_report()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>monitoring.system_stability_report()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>-----------------------------------
@@ -2184,12 +3200,12 @@ Monitoring: System Stability Report
 </code></pre>
 </div>
 </div>
-<div id="53641a5f" class="cell" data-execution_count="69">
+<div id="53641a5f" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_variable_table(style<span class="op">=</span><span class="st">"detailed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_variable_table(style<span class="op">=</span><span class="st">"detailed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="69">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
@@ -2633,62 +3649,16 @@ Monitoring: System Stability Report
 </div>
 </div>
 </div>
-<div id="9391702a" class="cell" data-execution_count="70">
+<div id="9391702a" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_variable_table(style<span class="op">=</span><span class="st">"summary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>monitoring.psi_variable_table(style<span class="op">=</span><span class="st">"summary"</span>).plot.bar(x<span class="op">=</span><span class="st">'Variable'</span>, y<span class="op">=</span><span class="st">'PSI'</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), title<span class="op">=</span><span class="st">'Population Stability Index (PSI) by Variable'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="70">
+<div class="cell-output cell-output-display">
 <div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Variable</th>
-<th data-quarto-table-cell-role="th">PSI</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>cb_person_default_on_file</td>
-<td>0.000492</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>loan_amnt</td>
-<td>0.002183</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>loan_grade</td>
-<td>0.000203</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>loan_intent</td>
-<td>0.002813</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>loan_percent_income</td>
-<td>0.001496</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>person_home_ownership</td>
-<td>0.000041</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>person_income</td>
-<td>0.001478</td>
-</tr>
-</tbody>
-</table>
-
+<figure class="figure">
+<p><img src="code_files/figure-html/cell-37-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
 </div>
