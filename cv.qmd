@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-description: "Download or view the curriculum vitae of Oun Vikreth, Data Scientist and researcher."
+description: "The curriculum vitae of Me, Data Scientist, Specialized in Credit Risk."
 format:
   html:
     toc: false

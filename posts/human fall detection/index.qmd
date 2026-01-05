@@ -1,0 +1,58 @@
+---
+title: "Human Fall Detection"
+subtitle: "Building a Real-Time Fall Detection System with YOLO and OpenCV"
+author: "OUN Vikreth"
+date: "2024-11-02"
+categories: [AI, CV]
+image: "pf_fall.jpg"
+---
+
+![How it works](Videoovervakning_Hikvision_Fall-detection.jpg)
+
+# Introduction
+
+Falls are a major concern, especially for older adults. According to the CDC, over 14 million older adults—or one in four—report falling each year. These incidents are the leading cause of injury and death in this age group, resulting in about 38,000 deaths and 3 million emergency department visits annually in 2021. With an aging population, innovative solutions like AI-powered fall detection systems are becoming essential to enhance safety and provide timely assistance. In this blog post, we'll explore a project that uses YOLO for training on fall images, OpenCV for live camera detection, and an email alert system to notify caregivers when a fall is detected.
+
+
+![My Expirement](u05_fall_detected_20240817_081049.gif#center)
+
+# Why Fall Detection Matters?
+
+Falls don't just cause physical harm; they can lead to long-term health issues, loss of independence, and significant healthcare costs—estimated at $80 billion annually for non-fatal falls. Traditional methods, like wearable sensors, have limitations such as discomfort or forgetfulness in wearing them. Vision-based systems, on the other hand, offer non-intrusive monitoring using everyday cameras. This project leverages computer vision to detect falls in real-time, making it ideal for home care, hospitals, or assisted living facilities.
+
+![Old Techonlogy](device1%20(1).jpg)
+
+# The Core Technology: YOLO for Fall Detection
+
+At the heart of this system is YOLO (You Only Look Once), a state-of-the-art object detection model known for its speed and accuracy in real-time applications. YOLO treats detection as a single regression problem, predicting bounding boxes and class probabilities directly from full images in one evaluation. For fall detection, the model is trained on a dataset of images depicting people in falling positions versus normal activities.
+
+- Collect or use datasets like LE2I Fall Detection Dataset, which includes various fall scenarios.
+- Fine-tune a pre-trained YOLO model (e.g., YOLOv8 or YOLOv11) on these images to recognize "fall" as a custom class.
+- The model outputs bounding boxes around detected persons and classifies if a fall is occurring based on posture and motion cues.
+
+This approach achieves high precision in dynamic environments, often combined with pose estimation for better accuracy.
+
+# Real-Time Processing with OpenCV
+
+Once trained, the YOLO model integrates with OpenCV, an open-source computer vision library, for live video analysis. OpenCV handles camera input, frame capture, and preprocessing, making it perfect for surveillance setups.
+
+Here's how it works in the project:
+
+- Access a webcam or IP camera feed using OpenCV's `VideoCapture`.
+- Process each frame: Resize, convert to the required format, and pass it through the YOLO model.
+- If a fall is detected (e.g., via a confidence threshold), flag it and trigger the alert.
+- Display the output with bounding boxes for visual verification.
+
+This setup ensures low-latency detection, crucial for immediate response. Systems like this have been implemented in research, showing effectiveness in multi-person scenes.
+
+# Alert Mechanism: Sending Emails on Detection
+
+![Alert Email](Screenshot%202026-01-04%20133732.png)
+
+The system's value shines in its alerting feature. When a fall flag is raised:
+
+Capture a screenshot of the frame showing the fall.
+Use Python's `smtplib` library to send an email with the details, including the timestamp and image attachment.
+Recipients could be family members, caregivers, or emergency services.
+
+This automation bridges detection to action, potentially saving lives by reducing response time. Similar projects have used email alerts in conjunction with hardware like ESP32, but this vision-based method is more versatile.

@@ -5,11 +5,13 @@ project:
 website:
   title: "OUN VIKRETH"
   site-url: https://oun-vikreth.github.io/
-  description: "Portfolio, projects, and CV of Oun Vikreth – Data Scientist and Credit Riksk Modelling."
+  description: "Portfolio, projects, and CV of Oun Vikreth, Data Scientist and Credit Risk Modelling."
   navbar:
+    logo: "statics/logo.gif"
     right:
       - about.qmd
       - cv.qmd
+      - index.qmd
       - icon: github
         href: https://github.com/oun-vikreth
       - icon: LinkedIn

@@ -13,45 +13,44 @@ about:
       href: https://github.com/oun-vikreth/
 ---
 
-Welcome to my personal blog! My name is **OUN VIKRETH**. Here, I share my thoughts, experiences, and projects related to technology, programming, and personal growth.
+សួរស្ដី/Hi/Bonjour/こんにちは!
 
-This blog serves as a space to document my learning journey, showcase my work, and connect with like-minded individuals. Feel free to explore my posts and reach out if you have any questions or feedback.
-
-Thank you for visiting!
+My name is OUN Vikreth. I a
 
 ---
 
 ## 👐 Volunteer Experience
 ![Volunteer Experience](statics/volunteer.jpg)
 
-I enjoy contributing to meaningful events and supporting community initiatives. Some of my volunteer experiences include:
+- **SEA Games 2023 (Cambodia)** – Volunteered in the first SEA Games ever hosted in Cambodia, assisting with event operations and athlete coordination.
 
-- **SEA Games 2023 (Cambodia)** – Volunteered in the first SEA Games ever hosted in Cambodia, assisting with event operations and athlete coordination.  
-- **Community Tech Workshops** – Teaching students and beginners about programming and digital skills.  
-- **Local Charity Events** – Helping organize and support local outreach and fundraising activities.  
-- **Youth Mentorship** – Guiding and motivating young learners in personal and educational development.
+![Sharing Session about Internship Exprience to junior](statics/sharing.jpg)
 
 ---
 
 ## 🏅 Sports & Activities
+
+::: {#fig-elephants layout-ncol=2}
+
+![Badminton](statics/badmintin.jpg)
+
 ![Sports Activities](statics/sport.jpg)
 
-Sports have always played an important role in my life. I stay active through:
+:::
 
-- **Badminton** – My main sport; regularly training and competing for fun and improvement.  
+Sports have always played an important role in my life. I stay active through:
 - **University Games (National Level)** – Participated in national university competitions, representing my institution.  
-- **Running & Fitness** – Maintaining an active lifestyle to stay healthy and disciplined.  
-- **Outdoor Activities** – Enjoying hiking, cycling, and other adventures to recharge physically and mentally.
 
 ---
 
 ## 🎓 Training & Certifications
 ![Training and Certifications](statics/training.jpg)
 
+![TUX Global Institute](statics/tux.jpg)
+
 I continuously expand my knowledge through training programs and certifications:
 
-- **Web Development Courses** – Learning modern frameworks and development workflows.  
-- **Software Engineering Workshops** – Improving coding standards, testing skills, and project management.  
+- **AI** – Learning modern frameworks and development workflows.  
 - **Professional Skill Development** – Participating in programs focusing on growth, productivity, and communication.
 
 Feel free to reach out if you'd like to collaborate, learn together, or discuss any of these interests!

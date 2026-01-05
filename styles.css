@@ -1,11 +1,14 @@
-/* css styles */
+/* import fonts from local directory */
 @font-face {
-  font-family: "DMSans";
-  src: url("statics/DMSans-Light.ttf");
+    font-family: 'TildaSans';
+    src: url('statics/TildaSans.07TTF/TildaSans-Regular.ttf') format('woff2'),
+         url('statics/TildaSans.07TTF/TildaSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-    font-family: "EB Garamond", Sans-serif;
+    font-family:  'TildaSans', Arial, sans-serif;
     font-style: normal;
 }
 
@@ -15,7 +18,7 @@ nav {
 }
 
 /* import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Special+Gothic:wght@400..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* all formats */
 
@@ -102,4 +105,20 @@ from: https://github.com/quarto-dev/quarto-cli/discussions/2538#discussioncommen
     font-weight: 700;
     color: #36a7e9;
   }
+}
+
+.caption {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.navbar-logo {
+  height: 200px;
+  width: auto;
 }

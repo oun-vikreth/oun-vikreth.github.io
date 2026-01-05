@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="OUN Vikreth">
+<meta name="dcterms.date" content="2024-11-02">
 
-<title>Blogs – OUN VIKRETH</title>
+<title>Human Fall Detection – OUN VIKRETH</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6f90362569d0108fb48b05b9f6c95e41.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6f90362569d0108fb48b05b9f6c95e41.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,80 +68,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./statics/logo.gif" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../statics/logo.gif" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">OUN VIKRETH</span>
     </a>
   </div>
@@ -152,15 +94,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item compact">
@@ -183,158 +125,112 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blogs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Human Fall Detection</h1>
+            <p class="subtitle lead">Building a Real-Time Fall Detection System with YOLO and OpenCV</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">CV</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>OUN Vikreth </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 2, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QUk=">AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q1Y=">CV <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y3JlZGl0IHNjb3Jpbmc=">credit scoring <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Videoovervakning_Hikvision_Fall-detection.jpg" class="img-fluid figure-img"></p>
+<figcaption>How it works</figcaption>
+</figure>
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Falls are a major concern, especially for older adults. According to the CDC, over 14 million older adults—or one in four—report falling each year. These incidents are the leading cause of injury and death in this age group, resulting in about 38,000 deaths and 3 million emergency department visits annually in 2021. With an aging population, innovative solutions like AI-powered fall detection systems are becoming essential to enhance safety and provide timely assistance. In this blog post, we’ll explore a project that uses YOLO for training on fall images, OpenCV for live camera detection, and an email alert system to notify caregivers when a fall is detected.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="u05_fall_detected_20240817_081049.gif#center" class="img-fluid figure-img"></p>
+<figcaption>My Expirement</figcaption>
+</figure>
+</div>
+</section>
+<section id="why-fall-detection-matters" class="level1">
+<h1>Why Fall Detection Matters?</h1>
+<p>Falls don’t just cause physical harm; they can lead to long-term health issues, loss of independence, and significant healthcare costs—estimated at $80 billion annually for non-fatal falls. Traditional methods, like wearable sensors, have limitations such as discomfort or forgetfulness in wearing them. Vision-based systems, on the other hand, offer non-intrusive monitoring using everyday cameras. This project leverages computer vision to detect falls in real-time, making it ideal for home care, hospitals, or assisted living facilities.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="device1 (1).jpg" class="img-fluid figure-img"></p>
+<figcaption>Old Techonlogy</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-core-technology-yolo-for-fall-detection" class="level1">
+<h1>The Core Technology: YOLO for Fall Detection</h1>
+<p>At the heart of this system is YOLO (You Only Look Once), a state-of-the-art object detection model known for its speed and accuracy in real-time applications. YOLO treats detection as a single regression problem, predicting bounding boxes and class probabilities directly from full images in one evaluation. For fall detection, the model is trained on a dataset of images depicting people in falling positions versus normal activities.</p>
+<ul>
+<li>Collect or use datasets like LE2I Fall Detection Dataset, which includes various fall scenarios.</li>
+<li>Fine-tune a pre-trained YOLO model (e.g., YOLOv8 or YOLOv11) on these images to recognize “fall” as a custom class.</li>
+<li>The model outputs bounding boxes around detected persons and classifies if a fall is occurring based on posture and motion cues.</li>
+</ul>
+<p>This approach achieves high precision in dynamic environments, often combined with pose estimation for better accuracy.</p>
+</section>
+<section id="real-time-processing-with-opencv" class="level1">
+<h1>Real-Time Processing with OpenCV</h1>
+<p>Once trained, the YOLO model integrates with OpenCV, an open-source computer vision library, for live video analysis. OpenCV handles camera input, frame capture, and preprocessing, making it perfect for surveillance setups.</p>
+<p>Here’s how it works in the project:</p>
+<ul>
+<li>Access a webcam or IP camera feed using OpenCV’s <code>VideoCapture</code>.</li>
+<li>Process each frame: Resize, convert to the required format, and pass it through the YOLO model.</li>
+<li>If a fall is detected (e.g., via a confidence threshold), flag it and trigger the alert.</li>
+<li>Display the output with bounding boxes for visual verification.</li>
+</ul>
+<p>This setup ensures low-latency detection, crucial for immediate response. Systems like this have been implemented in research, showing effectiveness in multi-person scenes.</p>
+</section>
+<section id="alert-mechanism-sending-emails-on-detection" class="level1">
+<h1>Alert Mechanism: Sending Emails on Detection</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshot 2026-01-04 133732.png" class="img-fluid figure-img"></p>
+<figcaption>Alert Email</figcaption>
+</figure>
+</div>
+<p>The system’s value shines in its alerting feature. When a fall flag is raised:</p>
+<p>Capture a screenshot of the frame showing the fall. Use Python’s <code>smtplib</code> library to send an email with the details, including the timestamp and image attachment. Recipients could be family members, caregivers, or emergency services.</p>
+<p>This automation bridges detection to action, potentially saving lives by reducing response time. Similar projects have used email alerts in conjunction with hardware like ESP32, but this vision-based method is more versatile.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y3JlZGl0IHNjb3JpbmcsY29kZSxhbmFseXNpcw==" data-listing-date-sort="1761670800000" data-listing-file-modified-sort="1762439472386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/credit scoring/code.html" class="no-external"></a></p><a href="./posts/credit scoring/code.html" class="no-external">
-<p><img loading="lazy" src="./posts/credit scoring/code_files/figure-html/cell-28-output-1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/credit scoring/code.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/credit scoring/code.html" class="no-external">Credit Scoring</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/credit scoring/code.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JlZGl0IHNjb3Jpbmc='); return false;">
-credit scoring
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/credit scoring/code.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/credit scoring/code.html --></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/credit scoring/code.html" class="no-external">
-<div class="listing-date">
-Oct 29, 2025
-</div>
-<div class="listing-author">
-Vikreth
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyxjb2RlLGFuYWx5c2lz" data-listing-date-sort="1761670800000" data-listing-file-modified-sort="1761714024634" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/post-with-code/index.html --></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Oct 29, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="QUksQ1Y=" data-listing-date-sort="1730480400000" data-listing-file-modified-sort="1767508685577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="526">
-<div class="thumbnail">
-<p><a href="./posts/human fall detection/index.html" class="no-external"></a></p><a href="./posts/human fall detection/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/human fall detection/pf_fall.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/human fall detection/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/human fall detection/index.html" class="no-external">Human Fall Detection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/human fall detection/index.html" class="no-external">Building a Real-Time Fall Detection System with YOLO and OpenCV</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q1Y='); return false;">
-CV
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/human fall detection/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/human fall detection/index.html --></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/human fall detection/index.html" class="no-external">
-<div class="listing-date">
-Nov 2, 2024
-</div>
-<div class="listing-author">
-OUN Vikreth
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
