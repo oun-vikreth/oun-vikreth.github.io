@@ -24,5 +24,8 @@
   },
   "posts/human fall detection/index.qmd": {
     "index.html": "70bc805e"
+  },
+  "posts/post-with-code/index.ipynb": {
+    "index.html": "b867600d"
   }
 }
